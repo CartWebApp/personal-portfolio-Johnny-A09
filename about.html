@@ -3,46 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Portfolio - About</title>
 </head>
 <body>
+
     <nav class="content-nav">
-        <a href="portfolio.html">Works</a>
-        <a href="about.html">About Me</a>
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="about.html" class="active">About Me</a>
         <a href="resume.html">Resume</a>
         <a href="contact.html">Contact</a>
     </nav>
 
-    <section class="card-plan">
-        <div class="content">
-            <h3 class="year-plan">5-Year Plan</h3>
-            <p class="plan-content">
-                In the next 5 years I would have wanted to finish high school and go through 
-                a 4-year college for my desired major (most likely candidate being video game
-                design/creation). I would also like to find some type of opportunity to experience 
-                or learn about the industry, and how to get a job there. Depending on what I figure out 
-                or find would determine if I spend more time in college or not.
-            </p>
+    <div class="about-profile-pic-wrap">
+        <img src="" alt="" class="about-profile-pic" id="aboutPic">
+        <span class="about-pic-placeholder">Pic of me</span>
+    </div>
+
+    <div class="about-grid">
+
+        <div class="flip-card">
+            <div class="flip-inner">
+                <div class="flip-front">
+                    <img src="images/plan.png" alt="5-Year Plan">
+                    <p class="card-label">5-Year Plan</p>
+                </div>
+                <div class="flip-back">
+                    <h3>5-Year Plan</h3>
+                    <p>In the next 5 years I would have wanted to finish high school and go through a 4-year college for my desired major (most likely candidate being video game design/creation). I would also like to find some type of opportunity to experience or learn about the industry, and how to get a job there.</p>
+                </div>
+            </div>
         </div>
+
+        <div class="flip-card">
+            <div class="flip-inner">
+                <div class="flip-front">
+                    <img src="images/reflection.png" alt="Reflection">
+                    <p class="card-label">Reflection</p>
+                </div>
+                <div class="flip-back">
+                    <h3>Reflection</h3>
+                    <p>At the beginning of the CART school year I really didn’t know what to expect in what the class would contain or be about. In terms of programming I had very little knowledge of the space, aside from a computer science class that I had taken in middle school. Just about everything in a site felt completely out of reach to me; especially all of the screen manipulation or storage of things like videos on sites.
+All of the basic things like HTML came to me quickly and were easy to follow as we went. The first project that REALLY tested my skills was the CSS Zen Garden project. By that point I understood HTML just about completely, but CSS was a whole nother battle to be fought. I had no rough time getting what I wanted to be translated onto the page, and had to be persistent to achieve my goals. The first time staring at a blank VSCode document felt a bit jarring, in the sense that this was where entire sites that I've seen everywhere started from: a blank file.
+<button id="ref-more">Read More:</button></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-inner">
+                <div class="flip-front">
+                    <img src="images/awards.png" alt="Awards">
+                    <p class="card-label">Awards</p>
+                </div>
+                <div class="flip-back">
+                    <h3>Awards</h3>
+                    <p>Recognition and achievements earned through hard work and dedication in academics and extracurricular activities. These awards reflect my commitment to excellence and continuous improvement in everything I pursue.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-inner">
+                <div class="flip-front">
+                    <img src="images/certificates.png" alt="Certificates">
+                    <p class="card-label">Certificates</p>
+                </div>
+                <div class="flip-back">
+                    <h3>Certificates</h3>
+                    <p>Certifications earned in web development and technology fields. These credentials demonstrate my dedication to learning and keeping up with industry standards in HTML, CSS, JavaScript, and related tools.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-inner">
+                <div class="flip-front">
+                    <img src="images/hobbies.png" alt="Hobbies">
+                    <p class="card-label">Hobbies</p>
+                </div>
+                <div class="flip-back">
+                    <h3>Hobbies</h3>
+                    <p>Outside of coding I enjoy music, gaming, and spending time in nature. These hobbies keep me balanced and often inspire creative ideas I bring back into my development work. They're a big part of who I am beyond the screen.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <section id="more-cont" style="display:none;">
+        <p>
+        HTML for me clicked instantly; as it was being explained, I understood it and was really easy to comprehend, the most difficult part being what was when and where a tag was to be “properly” used. CSS took a bit longer but once the hurdle in the form of the Zen Garden project had passed it really put everything into place for me and I felt that CSS was a piece of cake after that along with the constant practices given to the class. JavaScript felt like a whole other world when looking at it with no knowledge of it but once we started with the basics building off of that, as soon as we got to functions, it all started making sense to me, then allowing me to be able to look at JS files and understand what was there, happening, and why it was doing those things for the most part, still without a complete understanding of the language and all of its intricacies. 
+        One instance of where persistence was especially needed was the different JS practices we were given, where no matter what I would do I felt that it would never work. It took a lot of time and effort just tweaking the code until it finally worked then realising what I had done and why it was malfunctioning. I remember on practice number 4, exercise 8, I had a lot of trouble figuring out how to get the adder to work, but kept working at it, referencing the book wherever I could to finally reach the solution that was acceptable to me. 
+        I started using collaboration and communication as problem solving tools in multiple instances. If I was stuck or having issues with my code, I would either ask to see what one of my peers had done as a reference point to see what they had done differently and how I could apply that to my own work; or I would ask them to look at my work and try to find any problems that stood out to them.
+        Transitioning from the previous iterations of the skills and concepts used to more complex ideas proved to be challenging at first but once I took my own time to learn how they worked in practice on an actual site and not just using the skill in what can feel like an artificial scenario. 
+        This final project can prove my readiness for such a cut-throat industry through my demonstrations of persistence, and determination to get things done when they need to be no matter what gets in the way. Now, I am only human; not all of my ambitions can be achieved, but I will always do all that is in my power to reach said ambitions.
+        <button id="close">Close</button>
+        </p>
     </section>
 
-    <section class="card-reflet">
-        
-    </section>
-
-    <section class="card-award">
-        
-    </section>
-
-    <section class="card-certs">
-        
-    </section>
-
-    <section class="card-hobby">
-        
-    </section>
-    
     <script src="script.js"></script>
 </body>
 </html>

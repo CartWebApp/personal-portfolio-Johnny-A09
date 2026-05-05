@@ -1,22 +1,82 @@
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz3HlsZNTWfnWE1AJvsKnMor2QTU977r2x5G8J4DrJRakd2ZtcMYcVyUK4GapvohAxl/exec';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwCs_PYx7uUZR-D2-aCfXdGn1RndyJpnehbOW1VKt777ZZZesxxA-aosL-ioUvzeayUUw/exec';
+const reflectionMore = document.getElementById("ref-more");
+const reflectionClose = document.getElementById("close");
+const reflectionContainer = document.getElementById("more-cont");
 
 document.addEventListener('DOMContentLoaded', () => {
-    const form       = document.getElementById('contactForm');
-    const submitBtn  = document.getElementById('submitBtn');
-    const statusEl   = document.getElementById('formStatus');
+
+    const slides    = document.querySelectorAll('.slide');
+    const dots      = document.querySelectorAll('.dot');
+    const navLinks  = document.querySelectorAll('.nav-link[data-slide]');
+
+    if (slides.length > 0) {
+
+        const PROJECT_SLIDES = [0, 1, 2];
+        let current  = 0;
+        let autoTimer = null;
+
+        function showSlide(index) {
+            const target = index % PROJECT_SLIDES.length;
+            slides.forEach((s, i) => s.classList.toggle('active', i === target));
+            dots.forEach((d, i)  => d.classList.toggle('active', i === target));
+            current = target;
+        }
+
+        function startAuto() {
+            stopAuto();
+            autoTimer = setInterval(() => {
+                showSlide((current + 1) % PROJECT_SLIDES.length);
+            }, 3500);
+        }
+
+        function stopAuto() {
+            if (autoTimer) { clearInterval(autoTimer); autoTimer = null; }
+        }
+
+        navLinks.forEach(link => {
+            const slideIndex = parseInt(link.dataset.slide, 10);
+
+            link.addEventListener('mouseenter', () => {
+                stopAuto();
+                showSlide(slideIndex);
+            });
+
+            link.addEventListener('mouseleave', () => {
+                startAuto();
+            });
+
+        });
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                stopAuto();
+                showSlide(parseInt(dot.dataset.dot, 10));
+                startAuto();
+            });
+        });
+
+        slides.forEach(slide => {
+            slide.addEventListener('click', (e) => {
+            });
+        });
+
+        startAuto();
+    }
+
+    const form      = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const statusEl  = document.getElementById('formStatus');
 
     if (!form) return;
 
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        // Basic client-side validation
         if (!form.checkValidity()) {
             form.reportValidity();
             return;
         }
 
-        // Gather form data
         const payload = {
             email:   document.getElementById('email').value.trim(),
             name:    document.getElementById('name').value.trim(),
@@ -24,36 +84,44 @@ document.addEventListener('DOMContentLoaded', () => {
             inquiry: document.getElementById('inquiry').value.trim(),
         };
 
-        // Disable button while sending
-        submitBtn.disabled = true;
+        submitBtn.disabled    = true;
         submitBtn.textContent = 'Sending…';
         setStatus('', '');
 
         try {
-            // Google Apps Script requires a no-cors fetch for cross-origin POST
+            const formBody = new URLSearchParams(payload).toString();
+
             await fetch(SCRIPT_URL, {
                 method:  'POST',
-                mode:    'no-cors',          // GAS doesn't send CORS headers
-                headers: { 'Content-Type': 'application/json' },
-                body:    JSON.stringify(payload),
+                mode:    'no-cors',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body:    formBody,
             });
 
-            // no-cors gives an opaque response — assume success if no error thrown
-            setStatus('✓ Message sent! I\'ll be in touch soon.', 'success');
+            setStatus("✓ Message sent! I'll be in touch soon.", 'success');
             form.reset();
 
         } catch (err) {
             console.error('Submission error:', err);
             setStatus('✕ Something went wrong. Please try again.', 'error');
         } finally {
-            submitBtn.disabled = false;
+            submitBtn.disabled    = false;
             submitBtn.textContent = 'Submit';
         }
     });
 
-    // ── Helper ──────────────────────────────────────────────
     function setStatus(msg, type) {
-        statusEl.textContent  = msg;
-        statusEl.className    = 'form-status ' + type;
+        if (!statusEl) return;
+        statusEl.textContent = msg;
+        statusEl.className   = 'form-status ' + type;
     }
+
 });
+
+reflectionMore.addEventListener("click", ()=>{
+    reflectionContainer.style = "display:block;"
+})
+
+reflectionClose.addEventListener("click", ()=>{
+    reflectionContainer.style = "display:none;"
+})

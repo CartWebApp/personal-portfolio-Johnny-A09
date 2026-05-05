@@ -3,25 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Portfolio - Home</title>
 </head>
 <body>
-    <img src="" alt="photo" class="home-pic">
-    <div class="main-card">
-        <h1>Johnny Alvarado <br> Aspiring Web Developer</h1>
-        <nav class="home">
-            <a href="portfolio.html">Works</a>
-            <a href="about.html">About Me</a>
-            <a href="resume.html">Resume</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+
+    <div class="home-layout">
+
+        <div class="left-panel">
+
+            <div class="profile-pic-wrap">
+                <img src="" alt="" class="home-pic" id="homePic">
+                <span class="pic-placeholder">Pic of me</span>
+            </div>
+
+            <div class="name-block">
+                <h1>Johnny Alvarado</h1>
+                <p class="subtitle">Aspiring Web Developer</p>
+            </div>
+
+            <nav class="home-nav">
+                <a href="portfolio.html" class="nav-link" data-slide="0">
+                    <span class="nav-text">Portfolio</span>
+                    <img src="images/arrow.png" alt="" class="nav-arrow">
+                </a>
+                <a href="about.html" class="nav-link" data-slide="1">
+                    <span class="nav-text">About Me</span>
+                    <img src="images/arrow.png" alt="" class="nav-arrow">
+                </a>
+                <a href="resume.html" class="nav-link" data-slide="2">
+                    <span class="nav-text">Resume</span>
+                    <img src="images/arrow.png" alt="" class="nav-arrow">
+                </a>
+                <a href="contact.html" class="nav-link" data-slide="3">
+                    <span class="nav-text">Contact</span>
+                    <img src="images/arrow.png" alt="" class="nav-arrow">
+                </a>
+            </nav>
+
+        </div>
+
+        <div class="right-panel">
+            <div class="project-slideshow" id="slideshow">
+
+                <a href="https://bioshieldcj.netlify.app/" class="slide active" data-index="0" target="_blank">
+                    <img src="images/bio-home.png" alt="Bio Shield Repellent">
+                </a>
+                <a href="https://coleandjohnnypawpal.netlify.app/" class="slide" data-index="1" target="_blank">
+                    <img src="images/pawpal.png" alt="PawPal">
+                </a>
+                <a href="https://ja-eecu-budget-calc.netlify.app/" class="slide" data-index="2" target="_blank">
+                    <img src="images/budgcalc.png" alt="Budget Calculator">
+                </a>
+
+            </div>
+
+            <div class="slide-dots" id="slideDots">
+                <button class="dot active" data-dot="0"></button>
+                <button class="dot" data-dot="1"></button>
+                <button class="dot" data-dot="2"></button>
+            </div>
+        </div>
+
     </div>
-    <div class="background-cont">
-        <a href="https://bioshieldcj.netlify.app/"><img src="images/bio-home.png" alt="Bio Shield Home"></a>
-        <a href="https://coleandjohnnypawpal.netlify.app/"><img src="images/pawpal.png" alt="PawPal"></a>
-        <a href="https://ja-eecu-budget-calc.netlify.app/"><img src="images/budgcalc.png" alt="Budget Calculator"></a>
-    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
