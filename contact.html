@@ -3,24 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Portfolio - Contact</title>
 </head>
 <body>
+ 
     <nav class="content-nav">
-        <a href="portfolio.html">Works</a>
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
         <a href="about.html">About Me</a>
         <a href="resume.html">Resume</a>
-        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="active">Contact</a>
     </nav>
-    <form action="">
-        <input type="email" name="email" id="email" placeholder="Email" required>
-        <input type="text" name="name" id="name" placeholder="Name">
-        <input type="text" name="subject" id="subject" placeholder="Subject" required>
-        <input type="text" name="content" id="inquiry" placeholder="Inquiry" required>
-        <button type="submit">Submit</button>
-    </form>
-
+ 
+    <main class="contact-wrapper">
+ 
+        <div class="card intro-card">
+            <p>Thank you for taking the time to look through and explore my portfolio website. I put a lot of hard work into not just this site, but the different projects and papers mentioned here as well. I love giving complete projects as well as having fun with said projects throughout their creation, refining my skills to keep improving on them. Feel free to reach out to me with any inquiries, or opportunities at any time. You can reach me at my links, or the form below.</p>
+        </div>
+ 
+        <div class="bottom-row">
+ 
+            <div class="card form-card">
+                <form id="contactForm" novalidate>
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                    <input type="text"  name="name"  id="name"  placeholder="Name">
+                    <input type="text"  name="subject" id="subject" placeholder="Subject" required>
+                    <textarea name="content" id="inquiry" placeholder="Inquiry" required rows="4"></textarea>
+                    <button type="submit" id="submitBtn">Submit</button>
+                    <p class="form-status" id="formStatus"></p>
+                </form>
+            </div>
+ 
+            <div class="social-links">
+                <a href="https://linkedin.com" target="_blank" class="social-icon">
+                    <img src="images/linked-logo.png" class="linkedIn">
+                </a>
+                <a href="https://github.com" target="_blank" class="social-icon">
+                    <img src="images/git-logo.png" class="gitHub">
+                </a>
+            </div>
+ 
+        </div>
+    </main>
+ 
     <script src="script.js"></script>
 </body>
 </html>
