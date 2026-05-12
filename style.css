@@ -430,6 +430,15 @@ body {
     min-height: 600px;
 }
 
+.resume-link{
+    color:black;
+    background-color:white;
+    padding:.5% 2%;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-bottom:3%;
+}
+
 .resume-left {
     width: 240px;
     flex-shrink: 0;
