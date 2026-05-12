@@ -689,7 +689,6 @@ body {
     background: var(--pink);
     transform: rotateY(180deg);
     gap: 8px;
-    text-align: center;
 }
 
 .flip-back h3 {
