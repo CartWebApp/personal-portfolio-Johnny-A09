@@ -3,73 +3,285 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Portfolio - Sites</title>
 </head>
 <body>
+
     <nav class="content-nav">
-        <a href="portfolio.html">Works</a>
+        <a href="index.html">Home</a>
+        <a href="portfolio.html" class="active">Portfolio</a>
         <a href="about.html">About Me</a>
         <a href="resume.html">Resume</a>
         <a href="contact.html">Contact</a>
     </nav>
-    <section class="card-1">
-        <h2 class="site-head"></h2>
-        <ul class="buttons">
-            <li><button id="info-bio">Info</button></li>
-            <li><a href="https://bioshieldcj.netlify.app/" id="link-bio">Link</a></li>
-            <li><button id="pic-bio">Pictures</button></li>
-        </ul>
-    </section>
-    
-    <section class="card-2">
-        <ul class="buttons">
-            <li><button id="info-paw">Info</button></li>
-            <li><a href="https://coleandjohnnypawpal.netlify.app/" id="link-paw">Link</a></li>
-            <li><button id="pic-paw">Pictures</button></li>
-        </ul>    
-    </section>
-    <section class="card-3">
-        <ul class="buttons">
-            <li><button id="info-calc">Info</button></li>
-            <li><a href="https://ja-eecu-budget-calc.netlify.app/" id="link-calc">Link</a></li>
-            <li><button id="pic-calc">Pictures</button></li>
-        </ul>    
-    </section>
-    <section class="card-4">
-        <ul class="buttons">
-            <li><button id="info-paper1">Info</button></li>
-            <li><button id="paper1">Paper</button></li>
-        </ul>    
-    </section>
-    <section class="card-5">
-        <ul class="buttons">
-            <li><button id="info-paper2">Info</button></li>
-            <li><button id="paper2">Paper</button></li>
-        </ul>    
-    </section>
-    
-    <section class="card1-cont" id="card1">
-        
-   </section>
-    
-    <section class="card2-cont" id="card2">
 
-    </section>
-    
-    <section class="card3-cont" id="card3">
+    <div class="portfolio-list">
 
-    </section>
-    
-    <section class="card4-cont" id="card4">
+        <div class="port-card" id="card-bio">
+            <div class="port-img-wrap">
+                <span class="port-card-label">Bio Shield</span>
+                <img src="images/bio-home.png" alt="Bio Shield" class="port-img">
+                <div class="port-img-overlay">
+                    <h2>Bio Shield</h2>
+                    <p>A fully functioning e-commerce site with 7 pages and a working shopping cart. Built with HTML, CSS, and JavaScript. AI tools like ChatGPT assisted with formatting and product image creation.</p>
+                </div>
+            </div>
+            <div class="port-actions">
+                <button class="port-btn info-btn" data-target="overlay-bio">Info</button>
+                <a href="https://bioshieldcj.netlify.app/" target="_blank" class="port-btn link-btn">Link</a>
+            </div>
+        </div>
 
-    </section>
-    
-    <section class="card5-cont" id="card5">
+        <div class="port-card" id="card-paw">
+            <div class="port-img-wrap">
+                <span class="port-card-label">PawPal</span>
+                <img src="images/pawpal.png" alt="PawPal" class="port-img">
+                <div class="port-img-overlay">
+                    <h2>PawPal</h2>
+                    <p>A 2-person team project with 16 pages. Designed as a responsive mock-up in Figma, then coded in VS Code. Claude assisted with writing the JavaScript used throughout the site.</p>
+                </div>
+            </div>
+            <div class="port-actions">
+                <button class="port-btn info-btn" data-target="overlay-paw">Info</button>
+                <a href="https://coleandjohnnypawpal.netlify.app/" target="_blank" class="port-btn link-btn">Link</a>
+            </div>
+        </div>
 
-    </section>
+        <div class="port-card" id="card-calc">
+            <div class="port-img-wrap">
+                <span class="port-card-label">Budget Calculator</span>
+                <img src="images/budgcalc.png" alt="Budget Calculator" class="port-img">
+                <div class="port-img-overlay">
+                    <h2>Budget Calculator</h2>
+                    <p>A budget calculator built for EECU featuring a pie chart breakdown of expenses by category, a checkbook ledger, and tax calculations. Built with HTML, CSS, and JavaScript.</p>
+                </div>
+            </div>
+            <div class="port-actions">
+                <button class="port-btn info-btn" data-target="overlay-calc">Info</button>
+                <a href="https://ja-eecu-budget-calc.netlify.app/" target="_blank" class="port-btn link-btn">Link</a>
+            </div>
+        </div>
 
-    
+        <div class="port-card" id="card-paper1">
+            <div class="port-img-wrap">
+                <span class="port-card-label">Research Paper</span>
+                <img src="images/research.png" alt="Research Paper" class="port-img">
+                <div class="port-img-overlay">
+                    <h2>Research Paper</h2>
+                    <p>No additional details besides info button.</p>
+                </div>
+            </div>
+            <div class="port-actions">
+                <button class="port-btn info-btn" data-target="overlay-paper1">Info</button>
+                <button class="port-btn link-btn">Paper</button>
+            </div>
+        </div>
+
+        <div class="port-card" id="card-paper2">
+            <div class="port-img-wrap">
+                <span class="port-card-label">Attention Economy Argumentative Paper</span>
+                <img src="images/argument.png" alt="Argumentative Paper" class="port-img">
+                <div class="port-img-overlay">
+                    <h2>Attention Economy Argumentative Paper</h2>
+                    <p>No additional details besides info button.</p>
+                </div>
+            </div>
+            <div class="port-actions">
+                <button class="port-btn info-btn" data-target="overlay-paper2">Info</button>
+                <button class="port-btn link-btn">Paper</button>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="info-overlay" id="overlay-bio">
+        <div class="info-overlay-box">
+            <button class="overlay-close" data-close="overlay-bio">✕</button>
+            <h2>Project: "BioShield Insect Repellant"</h2>
+            <p class="overlay-tag">[Project Overview]</p>
+            <p>BioShield is a fake company that a multi-page site was created for, with the purpose of teaching the creators basic communication and collaboration skills, since it was done in pairs, as well as being an introduction to basic HTML and web development as a whole.</p>
+
+            <div class="overlay-section">
+                <p class="overlay-num">1. The Technology Stack</p>
+                <ul>
+                    <li><strong>Languages:</strong> HTML5, CSS3, and Vanilla JavaScript.</li>
+                    <li><strong>Tools:</strong> Visual Studio Code, and ChatGPT for the development of the site.</li>
+                    <li><strong>Deployment:</strong> Hosted through Netlify as a free and secure way to deploy the site.</li>
+                </ul>
+            </div>
+
+            <div class="overlay-section">
+                <p class="overlay-num">2. Concepts Learned</p>
+                <ul>
+                    <li>Semantic HTML: Learned the basics of HTML5, and how it was to be organized in a basic site.</li>
+                    <li>Collaboration: Worked in a pair for the duration of the site's creation, teaching how to work with someone that I had never interacted with.</li>
+                    <li>Communication: Taught the importance of communication when working with someone on a project.</li>
+                </ul>
+            </div>
+
+            <div class="overlay-section">
+                <p class="overlay-num">3. Challenges &amp; Solutions</p>
+                <ul>
+                    <li><strong>The Problem:</strong> I had trouble making my styling neat and organized in the file making it hard to find what I was looking for at times.<br><strong>The Solution:</strong> I had no solution at the time it was finished, but to fix it I would go back and organize the styling in a simple and comprehensive way.</li>
+                    <li><strong>The Problem:</strong> Going into the project I had little to no knowledge or experience in web development.<br><strong>The Solution:</strong> I took it as I went and did what I could trying and failing until something worked.</li>
+                    <li><strong>The Problem:</strong> The images given by the AI used for them were undesirable and didn't look good to us.<br><strong>The Solution:</strong> I changed what AI I used for the images as well as changed the prompts that I gave to receive images that I was satisfied with.</li>
+                </ul>
+            </div>
+
+            <div class="overlay-section">
+                <p class="overlay-num">4. Habits of Mind in Action (at least 2)</p>
+                <ul>
+                    <li><strong>Investigate:</strong> When running into problems I had to look everywhere to find where the source of said problem was.</li>
+                    <li><strong>Initiate:</strong> To actually start learning and begin the process of trial and error throughout the project I had to actually start testing things to find a solution.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-overlay" id="overlay-paw">
+        <div class="info-overlay-box">
+            <button class="overlay-close" data-close="overlay-paw">✕</button>
+            <h2>Project: "PawPal Pet Wellness Tracker"</h2>
+            <p class="overlay-tag">[Project Overview]</p>
+            <p>Again a fake company the site was created for, working in pairs as well. The project was meant to teach CSS, with the main component being media queries/screen size responsiveness.</p>
+
+            <div class="overlay-section">
+                <p class="overlay-num">1. The Technology Stack</p>
+                <ul>
+                    <li><strong>Languages:</strong> HTML5, CSS3, and Vanilla JavaScript.</li>
+                    <li><strong>Tools:</strong> Visual Studio Code, and ChatGPT for the development of the site.</li>
+                    <li><strong>Deployment:</strong> Hosted through Netlify as a free and secure way to deploy the site.</li>
+                </ul>
+            </div>
+
+            <div class="overlay-section">
+                <p class="overlay-num">2. Concepts Learned</p>
+                <ul>
+                    <li>AI Ethics: I learned how to utilize AI ethically without using it to do the work for me but instead using it as an assistant helping me through the troubles.</li>
+                    <li>CSS3: I learned how to put the concepts previously learned about CSS into practice making the site look exactly how it was envisioned.</li>
+                    <li>Screen Responsiveness: I learned how to adjust how the pages of the site looked through CSS media queries to ensure the site would look proper throughout all devices.</li>
+                </ul>
+            </div>
+
+            <div class="overlay-section">
+                <p class="overlay-num">3. Challenges &amp; Solutions</p>
+                <ul>
+                    <li><strong>The Problem:</strong> I was creating the screen size responsiveness, which went smoothly apart from the navbar which once hosted on netlify, had broken and the images used for said navbar would not show up.<br><strong>The Solution:</strong> The issue wasn't able to be fixed, so instead I changed the buttons from images to text as a quick change, since all else failed.</li>
+                    <li><strong>The Problem:</strong> I had issues coming with design choices for the site including how we wanted the style of the site to be.<br><strong>The Solution:</strong> I collaborated with my partner and we discussed the matter, eventually coming up with how we wanted the site to look.</li>
+                    <li><strong>The Problem:</strong> I had problems with deadlines and meeting them properly.<br><strong>The Solution:</strong> Each deadline was met on time, but without its stresses. To achieve the deadlines I had to talk with my partner on what to do and complete as much as I could in the timeframe.</li>
+                </ul>
+            </div>
+
+            <div class="overlay-section">
+                <p class="overlay-num">4. Habits of Mind in Action (at least 2)</p>
+                <ul>
+                    <li><strong>Communicate:</strong> I had to communicate with my partner from home to accomplish what we wanted without issues or conflicts.</li>
+                    <li><strong>Collaborate:</strong> I worked with my partner well to ensure everything was smooth and efficient.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-overlay" id="overlay-calc">
+        <div class="info-overlay-box">
+            <button class="overlay-close" data-close="overlay-calc">✕</button>
+            <h2>Project: "Budget Calculator"</h2>
+            <p class="overlay-tag">[Project Overview]</p>
+            <p>The Budget Calculator was a site created for EECU and their clients to use and manage their money in a budget. It aimed to teach us how to utilize JS in an actual site to complete the various tasks wanted.</p>
+
+            <div class="overlay-section">
+                <p class="overlay-num">1. The Technology Stack</p>
+                <ul>
+                    <li><strong>Languages:</strong> HTML5, CSS3, and Vanilla JavaScript.</li>
+                    <li><strong>Tools:</strong> Visual Studio Code, and Claude for the development of the site.</li>
+                    <li><strong>Deployment:</strong> Hosted through Netlify as a free and secure way to deploy the site.</li>
+                </ul>
+            </div>
+
+            <div class="overlay-section">
+                <p class="overlay-num">2. Concepts Learned</p>
+                <ul>
+                    <li>Expansion on AI ethics: Utilized AI during this project to assist me instead of doing the work for me. I used it to teach me how to do what I wanted to accomplish to ensure my understanding of the concepts.</li>
+                    <li>JS: Learned multiple concepts inside of JS such as Dom Manipulation, calculations, and different kinds of functions to achieve many things inside of a site.</li>
+                    <li>Collaboration: Throughout the creation of the site I had to work for others assisting in the creation of their own site, as well as directing others in the creation of my own site.</li>
+                </ul>
+            </div>
+
+            <div class="overlay-section">
+                <p class="overlay-num">3. Challenges &amp; Solutions</p>
+                <ul>
+                    <li><strong>The Problem:</strong> I had little-to-no people working for me on my own site, and was instead helping almost everyone else with theirs.<br><strong>The Solution:</strong> I had to work twice as hard on my own time to complete the site, getting it to where I wanted it to be.</li>
+                    <li><strong>The Problem:</strong> I was missing a good amount of knowledge in what I wanted to accomplish and how to accomplish it for my site.<br><strong>The Solution:</strong> I used Claude as I was creating the site as a guide/assistant to teach me how to create what I wanted to, as well as finding errors in my work as they came along.</li>
+                    <li><strong>The Problem:</strong> I had little time to work on my own project from what had happened prior to being able to work on my own.<br><strong>The Solution:</strong> I took time from my weekend, and used any spare time I had to work on my project keeping as much focus as I could through the different distractions constantly around me.</li>
+                </ul>
+            </div>
+
+            <div class="overlay-section">
+                <p class="overlay-num">4. Habits of Mind in Action (at least 2)</p>
+                <ul>
+                    <li><strong>Persist:</strong> I ran into many problems but worked on my site in its incomplete state for around 18 hours in total out of my weekend to finish it.</li>
+                    <li><strong>Connect:</strong> I worked with many people through the creation of not just my site, but theirs as well.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-overlay" id="overlay-paper1">
+        <div class="info-overlay-box">
+            <button class="overlay-close" data-close="overlay-paper1">✕</button>
+            <p class="overlay-writing-tag">Writing</p>
+            <h2>Project: "Research Paper"</h2>
+            <p class="overlay-tag">[Project Overview]</p>
+            <p>The Research Paper was an English assessment where I had to find information on how the behavioral responses affect enrichment given to said animals. The task aimed to test how I could complete something that I had never done before.</p>
+
+            <div class="overlay-section">
+                <p class="overlay-num">1. Concepts Learned</p>
+                <ul>
+                    <li>Time Management: I had to utilize my time wisely and work on it as much as I could to make it as good as possible with the given time, as well as it being my first time with this type of paper.</li>
+                    <li>Intuition: I had to take things on as they were thrown at me throughout writing this paper. Without intuition, I would most certainly have been lost, not knowing what to do.</li>
+                </ul>
+            </div>
+
+            <div class="overlay-section">
+                <p class="overlay-num">2. Habits of Mind in Action (at least 2)</p>
+                <ul>
+                    <li><strong>Investigate:</strong> I had to look up and use multiple websites to use in and for my paper.</li>
+                    <li><strong>Persist:</strong> I had to work through any stresses and issues to get this paper written.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-overlay" id="overlay-paper2">
+        <div class="info-overlay-box">
+            <button class="overlay-close" data-close="overlay-paper2">✕</button>
+            <h2>Project: "Attention Economy Argumentative Paper"</h2>
+            <p class="overlay-tag">[Project Overview]</p>
+            <p>Argumentative paper with the sides of who holds more power in a specific topic of attention as a currency and how it's given or taken. Either the Seeker, the Provider, or both. It aimed to test comprehension skills and speed with grace.</p>
+
+            <div class="overlay-section">
+                <p class="overlay-num">1. Concepts Learned</p>
+                <ul>
+                    <li>Time management: I was given a short amount of time to complete the paper so it wasn't my best work that I could have created. I did what I could in the time given to me, while still making it seem comprehensible to the reader.</li>
+                    <li>Efficiency: Since there was little time to work with for the creation of the paper, I had to be as efficient as possible to create a good work with such restrictions like time.</li>
+                </ul>
+            </div>
+
+            <div class="overlay-section">
+                <p class="overlay-num">2. Habits of Mind in Action (at least 2)</p>
+                <ul>
+                    <li><strong>Initiate:</strong> To be able to complete the paper in this high stress/demanding environment, I had to just start writing, getting something down for the rest of the ideas to start flowing.</li>
+                    <li><strong>Persist:</strong> I had to work through the stress of getting this paper done in the very short amount of time given to complete it, doing the best I could without losing my cool.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
