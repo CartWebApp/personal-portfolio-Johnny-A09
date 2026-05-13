@@ -2,9 +2,9 @@ const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwCs_PYx7uUZR-D2-aCf
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // readMore — only exists on one page, guard against null
-    const readMore     = document.getElementById("ref-more");
-    const closeBtn     = document.getElementById("close");
+    // readMore
+    const readMore = document.getElementById("ref-more");
+    const closeBtn = document.getElementById("close");
     const readMoreCont = document.getElementById("more-cont");
 
     if (readMore && readMoreCont) {
@@ -19,9 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Slideshow — only runs on pages that have slides
-    const slides   = document.querySelectorAll('.slide');
-    const dots     = document.querySelectorAll('.dot');
+    // Slideshow 
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
     const navLinks = document.querySelectorAll('.nav-link[data-slide]');
 
     if (slides.length > 0) {
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
         startAuto();
     }
 
-    // Info overlays — portfolio page
+    // Info overlays
     document.querySelectorAll('.info-btn[data-target]').forEach(btn => {
         btn.addEventListener('click', () => {
             const overlay = document.getElementById(btn.dataset.target);
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Contact form — only exists on contact page
+    // Contact form
     const form      = document.getElementById('contactForm');
     const submitBtn = document.getElementById('submitBtn');
     const statusEl  = document.getElementById('formStatus');
